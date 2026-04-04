@@ -1,0 +1,42 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+docker/
+
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Instrumentation
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pre-commit-cache/
+.uv-cache/
+
+# Secret
+.env
+.env.*
+
+# Gitlab
+.gitlab-ci.yml
+
+# Kubernetes deploy
+chart/
+*.values.yaml

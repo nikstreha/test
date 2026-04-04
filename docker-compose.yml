@@ -1,0 +1,49 @@
+services:
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    command: sh -c "alembic upgrade head && uv run src/cli.py --workers 1"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - db_network
+
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: component_postgres
+
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB_NAME:-backend_component}
+
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+    networks:
+      - db_network
+
+networks:
+  db_network:
+    driver: bridge
+
+volumes:
+  mongot:
+  postgres_data:

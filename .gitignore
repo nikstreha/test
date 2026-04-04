@@ -1,0 +1,137 @@
+# =================================
+# Operation System
+# =================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# =================================
+# Python
+# =================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =================================
+# C / C++
+# =================================
+*.so
+
+# =================================
+# Distribution / Buildng / Installing
+# =================================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =================================
+# Virtual Environment
+# =================================
+venv/
+.venv/
+env/
+.env/
+venv.bak/
+
+# =================================
+# IDE
+# =================================
+# IntelliJ
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Dev Container
+.devcontainer/.env
+
+# =================================
+# Code Quality & Testing
+# =================================
+# Pytest
+.pytest_cache/
+
+# Coverage report
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Linter
+.ruff_cache/
+.pre-commit-cache/
+
+# UV
+.uv-cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =================================
+# Configuration & Secret
+# =================================
+.env
+.env.*
+!.env.example
+
+# =================================
+# Docker
+# =================================
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# =================================
+# Log
+# =================================
+*.log
+*.log.*
+
+# =================================
+# DB
+# =================================
+*.sqlite3
+*.sqlite3-journal
+
+# =================================
+# User
+# =================================
+
+*.tgz
+*.tar
+*.tar.gz
